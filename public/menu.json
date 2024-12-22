@@ -1,0 +1,18 @@
+
+{
+  "range": "Sheet1!A1:D10",
+  "majorDimension": "ROWS",
+  "values": [
+    ["Name", "Image URL", "Price", "Category"],
+    ["Special Salad", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuKI5ZrBVvqIDC3eV_lXdN2KX4QC9Cv2KqIQ&s", "700 Birr", "Salads 🥗"],
+    ["Basic Salad", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuKI5ZrBVvqIDC3eV_lXdN2KX4QC9Cv2KqIQ&s", "900 Birr", "Salads 🥗"],
+    ["Egg on toast", "https://drive.google.com/file/d/1v8fhiCGfZOLNzhbfOW3WSZu6sjZWwxuM/view?usp=sharing", "700 Birr", "Brunch 🥖"],
+    ["Baguette", "https://drive.google.com/file/d/1JYlmUKvhNMUlKqAr7d8HWJKnl94M9-8u/view?usp=sharing", "900 Birr", "Brunch 🥖"],
+    ["Tea", "https://drive.google.com/file/d/1tv_Y0RngrhRitbqEIFaqbJjJkXGPNW8H/view?usp=sharing", "300 Birr", "Drinks ☕️"],
+    ["Red tea", "https://drive.google.com/file/d/1iQO2XdIKNBJdc5KgprFS8BPdUbOcPED2/view?usp=sharing", "400 Birr", "Drinks ☕️"],
+    ["Espresso", "https://drive.google.com/file/d/1uyoN9j550TW2Pl4ll1TAHvkK5EvrHwn7/view?usp=sharing", "5 Birr", "Drinks ☕️"],
+    ["Coffee", "https://drive.google.com/file/d/1avBZ-ECrB5CrokB8rqn_d7v6TkY42bbh/view?usp=sharing", "3 Birr", "Drinks ☕️"],
+    ["Cappuccino", "https://drive.google.com/file/d/1avBZ-ECrB5CrokB8rqn_d7v6TkY42bbh/view?usp=sharing", "4 Birr", "Drinks ☕️"]
+  ]
+}
+
