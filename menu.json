@@ -1,0 +1,17 @@
+
+{
+  "range": "Sheet1!A1:D10",
+  "majorDimension": "ROWS",
+  "values": [
+    ["Name", "Image URL", "Price", "Category"],
+    ["Special Salad", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuKI5ZrBVvqIDC3eV_lXdN2KX4QC9Cv2KqIQ&s", "700 Birr", "Salads 🥗"],
+    ["Basic Salad", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuKI5ZrBVvqIDC3eV_lXdN2KX4QC9Cv2KqIQ&s", "900 Birr", "Salads 🥗"],
+    ["Egg on toast", "https://raw.githubusercontent.com/itsyonatan/restaurant-menu/main/public/toast.png", "700 Birr", "Brunch 🥖"],
+    ["Baguette", "https://raw.githubusercontent.com/itsyonatan/restaurant-menu/main/public/baguette.png", "900 Birr", "Brunch 🥖"],
+    ["Tea", "https://raw.githubusercontent.com/itsyonatan/restaurant-menu/main/public/tea.png", "300 Birr", "Drinks ☕️"],
+    ["Red tea", "https://raw.githubusercontent.com/itsyonatan/restaurant-menu/main/public/red-tea.png", "400 Birr", "Drinks ☕️"],
+    ["Espresso", "https://raw.githubusercontent.com/itsyonatan/restaurant-menu/main/public/espresso.png", "5 Birr", "Drinks ☕️"],
+    ["Coffee", "https://raw.githubusercontent.com/itsyonatan/restaurant-menu/main/public/coffee.png", "3 Birr", "Drinks ☕️"],
+    ["Cappuccino", "https://raw.githubusercontent.com/itsyonatan/restaurant-menu/main/public/Cappuccino.png", "4 Birr", "Drinks ☕️"]
+  ]
+}
