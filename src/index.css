@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Love+Light&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Love+Light&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
   margin: 0;
@@ -25,6 +26,60 @@ main {
 }
 
 /*     app   */
+.menu-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-content .bg {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+.menu-content .l-leaf {
+  transform: rotate(90deg);
+  top: 400px;
+  left: -80px;
+  background: url('/public/leaf.png') no-repeat center;
+  background-size: contain;
+}
+
+.menu-content .r-leaf {
+  transform: rotate(-90deg);
+  top: 200vh;
+  right: -80px;
+  background: url('/public/leaf.png') no-repeat center;
+  background-size: contain;
+}
+
+.menu-content .strawberry {
+  transform: rotate(90deg);
+  top: 100vh;
+  right: -80px;
+  background: url('/public/strawberry.png') no-repeat center;
+  background-size: contain;
+}
+
+.menu-content .pancake {
+  transform: rotate(90deg);
+  top: 150vh;
+  left: -80px;
+  background: url('/public/pancake.png') no-repeat center;
+  background-size: contain;
+}
+
+.menu-content .drinks {
+  transform: rotate(90deg);
+  top: 250vh;
+  left: -80px;
+  background: url('/public/drinks.png') no-repeat center;
+  background-size: contain;
+}
+
+
 .app-container {
   display: flex;
   justify-content: center;
@@ -78,6 +133,7 @@ main {
   color: orange;
   position: relative;
 }
+
 .menu-header span p {
   font-family: 'Love Light';
   color: rgb(0, 0, 0);
@@ -111,6 +167,7 @@ main {
   border: 1px solid orange;
   border-radius: 8px;
   width: 260px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
 }
 
 /*      category-section    */
@@ -137,7 +194,6 @@ main {
   width: 10rem;
   border-radius: 100%;
 }
-
 
 .menu-items {
   display: flex;
@@ -179,6 +235,7 @@ main {
   overflow: hidden;
   text-overflow: ellipsis;
   color: #000000;
+  font-family: "playfair";
 }
 
 .item-description {
@@ -224,19 +281,27 @@ main {
 }
 
 
+
+@media (max-width: 760px) {
+  .menu-content .bg {
+    visibility: hidden;
+  }
+}
+
 @media (max-width: 640px) {
   .menu-header span {
     font-size: 4rem;
   }
-  .menu-header span p{
+
+  .menu-header span p {
     font-size: 1.6rem;
   }
 
-  .menu-header .sub-header{
+  .menu-header .sub-header {
     font-size: 1rem;
     margin-top: -1rem;
   }
-  
+
   .header {
     padding: 0.8rem;
   }
@@ -258,6 +323,7 @@ main {
   .menu-items {
     gap: 3rem;
   }
+
   .item-container {
     max-width: 12rem;
   }
@@ -286,13 +352,14 @@ main {
     font-size: 3rem;
   }
 
-  .menu-header span p{
+  .menu-header span p {
     font-size: 1.2rem;
   }
-  
-  .menu-header .sub-header{
+
+  .menu-header .sub-header {
     font-size: 0.8rem;
   }
+
   .header {
     padding: 0.rem;
   }

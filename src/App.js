@@ -18,11 +18,12 @@ const App = () => {
           category: item[3]
         }));
         setMenuData(transformedData);
-        const groupedCategories = [...new Set(transformedData.map(item => item.category))];
+        const groupedCategories = [...new Set(transformedData.filter(item => item.name.toLowerCase().includes(filter.toLowerCase()))
+          .map(item => item.category))];
         setCategories(groupedCategories);
       })
       .catch(error => console.error('Error fetching data:', error));
-  }, []);
+  }, [filter]);
 
   const handleScrollToCategory = (category) => {
     document.getElementById(category).scrollIntoView({ behavior: 'smooth' });
@@ -45,7 +46,12 @@ const App = () => {
         </div>
       </div>
 
-      <main>
+      <main className="menu-content">
+        <div className="bg l-leaf"></div>
+        <div className="bg r-leaf"></div>
+        <div className="bg strawberry"></div>
+        <div className="bg pancake"></div>
+        <div className="bg drinks"></div>
         {categories.map(category => (
           <section key={category} id={category} className="category-section">
             <div className='category-image'>
