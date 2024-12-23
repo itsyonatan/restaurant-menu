@@ -9,7 +9,7 @@ export const MenuItem = ({ item }) => {
         <div className="item-content">
           <h3 className="item-name">{item.name}</h3>
           <div className="item-description">
-            <p className="item-category">{item.category}</p>
+            <p className="item-category">{item.category.split(" ")[0]}</p>
             <p className="item-price">{item.price}</p>
           </div>
         </div>

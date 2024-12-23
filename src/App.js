@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import {MenuItem} from "./component/menuItem"
+import { MenuItem } from "./component/menuItem"
 
 const App = () => {
   const [menuData, setMenuData] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [filter, setFilter] = useState('');
 
   useEffect(() => {
-    // Fetch JSON data (Replace the URL with your endpoint or local file path)
-    fetch('/menu.json') // Replace with actual path or API endpoint
+    fetch('/menu.json')
       .then(response => response.json())
       .then(data => {
         const transformedData = data.values.slice(1).map(item => ({
@@ -24,28 +24,39 @@ const App = () => {
       .catch(error => console.error('Error fetching data:', error));
   }, []);
 
-  /*const handleScrollToCategory = (category) => {
+  const handleScrollToCategory = (category) => {
     document.getElementById(category).scrollIntoView({ behavior: 'smooth' });
-  };*/
+  };
 
   return (
     <div className="app-container">
-      {/*<header className="header">
+      <header className="header">
         {categories.map(category => (
           <button className='header-btn' key={category} onClick={() => handleScrollToCategory(category)}>
-            {category}
+            {category.split(" ")[0]}
           </button>
         ))}
-      </header>*/}
+      </header>
+      <div className='menu-header'>
+        <span>MENU <p>Very Tasty</p></span>
+        <p className='sub-header'>best restaurant in town</p>
+        <div className="search-bar">
+          <input type="text" placeholder='search by food name...' value={filter} onChange={(e) => setFilter(e.target.value)} />
+        </div>
+      </div>
 
       <main>
         {categories.map(category => (
           <section key={category} id={category} className="category-section">
-            <h2>{category}</h2>
+            <div className='category-image'>
+              <img src={`/${category}.png`} alt={category} />
+              <h3>{category.split(" ")[0]}</h3>
+            </div>
             <div className="menu-items">
-              {menuData.filter(item => item.category === category).map((item, index) => (
-                <MenuItem item = {item} key = {index} />
-              ))}
+              {menuData.filter(item => item.category === category && item.name.toLowerCase().includes(filter.toLowerCase()))
+                .map((item, index) => (
+                  <MenuItem item={item} key={index} />
+                ))}
             </div>
           </section>
         ))}
