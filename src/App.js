@@ -8,7 +8,7 @@ const App = () => {
   const [filter, setFilter] = useState('');
 
   useEffect(() => {
-    fetch('/menu.json')
+    fetch('/restaurant-menu/menu.json')
       .then(response => response.json())
       .then(data => {
         const transformedData = data.values.slice(1).map(item => ({
